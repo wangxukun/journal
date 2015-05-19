@@ -8,7 +8,16 @@
 	PADDING-TOP: 0px;
 	TEXT-DECORATION: none
 }
-
+#loginTitle h1{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 90px;
+	text-indent: 20px;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
 #user_login {
 	PADDING-RIGHT: 0px;
 	PADDING-LEFT: 0px;

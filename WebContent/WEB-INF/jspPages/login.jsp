@@ -12,7 +12,9 @@
 <script src="${pageContext.request.contextPath }/js/login.js" type="text/javascript" ></script>
 </HEAD>
 <BODY id=userlogin_body>
-	<DIV></DIV>
+	<DIV id=loginTitle>
+		<h1>银行存款日记账管理系统</h1>
+	</DIV>
 	<form id="loginForm" action="${pageContext.request.contextPath }/servlet/LoginServlet" method="post">
 	<DIV id=user_login>
 		<DL>
