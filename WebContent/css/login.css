@@ -1,0 +1,27 @@
+html,body{
+	background-color:#ABCDEF;
+}
+h1{
+	text-align: center;
+	font-family: "Î¢ÈíÑÅºÚ",Arial,Helvetica,sans-serif;
+	font-size: 90px;
+	color: #666;
+}
+#login{
+    padding : 6px 0 0 0;
+}
+p{
+    height : 22px;
+    line-height : 22px;
+    padding : 4px 0 0 25px;
+}
+.textbox{
+    height : 22px;
+    padding : 0 2px;
+}
+.easyui-linkbutton{
+    padding : 0 10px;
+}
+#btn{
+    text-align : center;
+}
