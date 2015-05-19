@@ -38,7 +38,7 @@
 							<UL>
 								<LI class=user_main_text>密码：</LI>
 								<LI class=user_main_input><INPUT class=TxtPasswordCssClass
-									id=Password type=password name=Password></LI>
+									id=Password type=password name=password></LI>
 							</UL>
 							<UL>
 								<LI class=user_main_text>记住登录：</LI>

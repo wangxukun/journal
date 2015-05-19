@@ -41,7 +41,11 @@ public class LoginServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if(user!=null){
-			System.out.println("Login success.");
+			if(user.getGrade()==1){
+				request.getRequestDispatcher("/WEB-INF/jspPages/county.jsp").forward(request, response);
+			}else if(user.getGrade()==2){
+				request.getRequestDispatcher("/WEB-INF/jspPages/town.jsp").forward(request, response);
+			}
 		}else{
 			System.out.println("Login fail.");
 		}
