@@ -3,7 +3,6 @@
 <HTML>
 <HEAD>
 <TITLE>用户登录</TITLE>
-<LINK href="${pageContext.request.contextPath }/images/xtree.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/User_Login.css" type=text/css rel=stylesheet>
 
 <script src="${pageContext.request.contextPath }/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
@@ -38,11 +37,12 @@
 							<UL>
 								<LI class=user_main_text>密码：</LI>
 								<LI class=user_main_input><INPUT class=TxtPasswordCssClass
-									id=Password type=password name=password></LI>
+									id=password type=password name=password></LI>
 							</UL>
 							<UL>
 								<LI class=user_main_text>记住登录：</LI>
-								<LI class=user_main_input><SELECT id=DropExpiration
+								<LI class=user_main_input>
+								<SELECT id=DropExpiration
 									name=DropExpiration>
 										<OPTION value=None selected>不保存</OPTION>
 										<OPTION value=Day>保存一天</OPTION>
@@ -59,8 +59,5 @@
 		</DL>
 	</DIV>
 	</FORM>
-	<DIV></DIV>
-
-	
 </BODY>
 </HTML>

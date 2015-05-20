@@ -1,0 +1,205 @@
+@CHARSET "UTF-8";
+html,body {
+	font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+	padding: 0 auto;
+	margin: 0 auto;
+}
+#north{
+	background-color:white;
+}
+#north div#left {
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	float: left;
+}
+
+#north div#left h1 {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 90px;
+	text-indent: 20px;
+	font-size: 30px;
+}
+
+#north div#right {
+	margin: 0;
+	width: 40%;
+	height: 100%;
+	float: right;
+}
+
+#north div#right ul {
+	margin: 0 10px 0 0;
+	width: 250px;
+	height: 100%;
+	float: right;
+}
+
+#north div#right ul li {
+	width: 240px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 8px;
+}
+
+
+#aa ul li{
+	margin-bottom: 20px;
+}
+#aa ul li a{
+	text-decoration: none;
+	color: #000000;
+}
+#aa ul li span:HOVER {
+	color: orange;
+	cursor:pointer;
+}
+#aa ul li a:HOVER {
+	color: orange;
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+	border:0;
+	margin-bottom: -5px;
+}
+#switchOperator p{
+	height: 40px;
+	line-height:40px;
+	color: red;
+	text-indent: 20px;
+}
+#switchOperator input{
+	width: 180px;
+	height: 20px;
+	margin-left: 40px;
+}
+
+/*
+	主体面板中内容
+*/
+.box{
+	width: 1000px;
+	height: 280px;
+	margin: 50px auto;
+}
+
+.box .link{
+	width: 205px;
+	height: 280px;
+	background: none;
+	margin: 0 20px;
+	float: left;
+}
+.link .icon{
+	display: inline-block;
+	width: 100%;
+	height: 190px;
+	transition: 0.2s linear;
+	-webkit-transition: 0.2s linear;
+}
+.link-one .icon{
+	background:url("../images/one.png") no-repeat center center;
+}
+.link-two .icon{
+	background:url("../images/two.png") no-repeat center center;
+}
+.link-three .icon{
+	background:url("../images/three.png") no-repeat center center;
+}
+.link-four .icon{
+	background:url("../images/four.png") no-repeat center center;
+}
+.link .icon:hover{
+	transform: rotate(360deg) scale(1.2);
+	-ms-transform: rotate(360deg) scale(1.2);
+	-webkit-transform: rotate(360deg) scale(1.2);
+	-o-transform: rotate(360deg) scale(1.2);
+	-moz-transform: rotate(360deg) scale(1.2);
+}
+.button{
+	display: block;
+	width: 180px;
+	height: 50px;
+	text-decoration: none;
+	line-height: 50px;
+	color: #2DCB70;
+	font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+	font-weight: bolder;
+	border: 2px solid rgba(0,0,0,0.5);
+	padding-left: 20px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: url("../images/allow.png") no-repeat 110px center;
+	position: relative;
+	transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+}
+.button:hover{
+	border: 2px solid rgba(0,0,0,1);
+	background-position: 120px center;
+}
+.button:hover .line{
+	background: #000;
+}
+.button .line{
+	display: block;
+	position: absolute;
+	background: none;
+	transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+}
+/*
+ top:
+  1.高度不变
+  2.宽度变（0-盒子的宽度）
+  3.位置：左-右
+*/
+.button .line-top{
+	height: 2px;
+	width: 0px;
+	left: -110%;
+	top: -2px;
+}
+.button:hover .line-top{
+	height: 2px;
+	width: 180px;
+	left: -2px;
+}
+.button .line-bottom{
+	height: 2px;
+	width: 0px;
+	right: -110%;
+	bottom: -2px;
+}
+.button:hover .line-bottom{
+	width: 100%;
+	right: -2px;
+}
+.button .line-left{
+	height: 0px;
+	width: 2px;
+	left: -2px;
+	bottom: -110%;
+}
+.button:hover .line-left{
+	height: 50px;
+	width: 2px;
+	bottom: -2px;
+}
+.button .line-right{
+	height: 0px;
+	width: 2px;
+	right: -2px;
+	top: -110%;
+}
+.button:hover .line-right{
+	height: 50px;
+	width: 2px;
+	top: -2px;
+}

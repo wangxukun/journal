@@ -3,7 +3,6 @@
 <html>
 <head>
 <title>主页</title>
-<link href="${pageContext.request.contextPath }/images/xtree.css" type=text/css rel=stylesheet>
 <link href="${pageContext.request.contextPath }/css/User_Login.css" type=text/css rel=stylesheet>
 
 <script src="${pageContext.request.contextPath }/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
