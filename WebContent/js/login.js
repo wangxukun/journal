@@ -3,10 +3,13 @@ $(function(){
 	$('#loginBtn').click(function(){
 		if($("#name").val()==""){
 			alert("用户名不能是空");
-		}else if($("#password").val()==""){
+			$("#name").focus();
+			return false;
+		}
+		if($("#password").val()==""){
 			alert("密码不能是空");
-		}else{
-			document.getElementById("loginForm").submit();
+			$("#password").focus();
+			return false;
 		}
 	});
 });

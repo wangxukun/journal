@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import xk.journal.domain.FeedbackInformation;
 import xk.journal.domain.User;
 import xk.journal.service.factory.ServiceFactory;
 
@@ -47,7 +48,9 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/jspPages/town.jsp").forward(request, response);
 			}
 		}else{
-			System.out.println("Login fail.");
+			FeedbackInformation feedback = new FeedbackInformation("登录失败","用户名或密码错误","/servlet/Default");
+			request.setAttribute("feedback", feedback);
+			request.getRequestDispatcher("/WEB-INF/jspPages/feedback.jsp").forward(request, response);
 		}
 	}
 
