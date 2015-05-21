@@ -81,7 +81,8 @@
 		    <div title="用户管理" data-options="iconCls:'icon-man'" style="padding:10px;">
 		        <div id="accordion-4">
 					<ul>
-						<li id="manageOperator"><span>操作员管理</span>
+						<li id="addUser"><span>增加用户</span>
+						<li id="delUser"><span>删除用户</span>
 					</ul>
 				</div>
 		    </div>
@@ -89,12 +90,6 @@
 	<!-- C左面板->可折叠面板 -->
     </div>
 <!---------------------------左面板--------------------------->    
-
-
-
-
-
-    
     
 <!--+++++++++++++++++++++++++主体面板+++++++++++++++++++++++++-->    
     <div data-options="region:'center'" style="padding:5px;">

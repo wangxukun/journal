@@ -28,4 +28,11 @@ public class UserManagementServiceImpl implements UserManagementService {
 			DAOFactory.getUserDaoInstance().add(user);
 		}
 	}
+
+	@Override
+	public boolean delete(String id) throws SQLException {
+		boolean flag = false;
+		flag = DAOFactory.getUserDaoInstance().delete(id);
+		return flag;
+	}
 }

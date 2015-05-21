@@ -23,4 +23,14 @@ public class UserManagementServiceProxy implements UserManagementService {
 				throw e;
 			}
 	}
+	@Override
+	public boolean delete(String id){
+		boolean flag = false;
+		try {
+			flag = this.service.delete(id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
 }

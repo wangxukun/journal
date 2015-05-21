@@ -9,6 +9,7 @@ package xk.journal.domain;
  */
 public class User {
 	private String id;
+	private String parentid;
 	private String name;
 	private String password;
 	private int grade;
@@ -20,6 +21,12 @@ public class User {
 	}
 	public String getName() {
 		return name;
+	}
+	public void setParentid(String parentid){
+		this.parentid = parentid;
+	}
+	public String getParentid(){
+		return parentid;
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -38,7 +45,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password
+		return "User [id=" + id + "parentid=" + parentid +", name=" + name + ", password=" + password
 				+ ", grade=" + grade + "]";
 	}
 	
