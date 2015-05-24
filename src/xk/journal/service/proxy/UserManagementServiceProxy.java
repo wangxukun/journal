@@ -14,13 +14,13 @@ public class UserManagementServiceProxy implements UserManagementService {
 		this.service = new UserManagementServiceImpl();
 	}
 	@Override
-	public void register(User user) throws Exception{
+	public void register(User user) throws SQLException,UserExistException{
 			try {
 				this.service.register(user);
 			} catch (UserExistException e) {
 				throw e;
 			} catch(SQLException e){
-				throw e;
+				e.printStackTrace();
 			}
 	}
 	@Override

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import xk.journal.dao.UserDao;
 import xk.journal.dao.impl.UserDaoImpl;
 import xk.journal.domain.User;
+import xk.journal.domain.VUserAccountRelation;
 import xk.journal.utils.JdbcUtils;
 
 /**
@@ -84,5 +85,31 @@ public class UserDaoProxy implements UserDao {
 		}
 		return user;
 	}
-
+	@Override
+	public boolean insertRelationAccount(String userid, String accountid)
+			throws SQLException {
+		boolean flag = false;
+		try{
+			this.jdbc.getConnection();
+			flag = this.dao.insertRelationAccount(userid, accountid);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			this.jdbc.releaseConnection();
+		}
+		return flag;
+	}
+	@Override
+	public VUserAccountRelation getRelation(String userid) throws SQLException {
+		VUserAccountRelation relation = null;
+		try{
+			this.jdbc.getConnection();
+			relation = this.dao.getRelation(userid);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			this.jdbc.releaseConnection();
+		}
+		return relation;
+	}
 }

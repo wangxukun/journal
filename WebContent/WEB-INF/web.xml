@@ -8,8 +8,14 @@
     <servlet-name>index</servlet-name>
     <url-pattern>/servlet/Default</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <servlet-name>countyAdduser</servlet-name>
+    <jsp-file>/WEB-INF/jspPages/county_adduser.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>countyAdduser</servlet-name>
+    <url-pattern>/servlet/CountyAdduser</url-pattern>
+  </servlet-mapping>
   <display-name>journal</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

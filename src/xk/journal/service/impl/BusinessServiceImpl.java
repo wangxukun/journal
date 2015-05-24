@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import xk.journal.dao.factory.DAOFactory;
 import xk.journal.domain.User;
+import xk.journal.domain.VUserAccountRelation;
 import xk.journal.service.BusinessService;
 
 /**
@@ -22,5 +23,20 @@ public class BusinessServiceImpl implements BusinessService {
 		User user = null;
 		user = DAOFactory.getUserDaoInstance().find(name, password);
 		return user;
+	}
+
+	@Override
+	public boolean userAccountRelation(String userid, String accountid)
+			throws SQLException {
+		boolean flag = false;
+		flag = DAOFactory.getUserDaoInstance().insertRelationAccount(userid, accountid);
+		return flag;
+	}
+
+	@Override
+	public VUserAccountRelation getRelationInfo(String userid) throws SQLException {
+		VUserAccountRelation relation = null;
+		relation = DAOFactory.getUserDaoInstance().getRelation(userid);
+		return relation;
 	}
 }

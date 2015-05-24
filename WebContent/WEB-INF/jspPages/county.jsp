@@ -13,6 +13,7 @@
 <script src="${pageContext.request.contextPath }/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath }/jquery/jquery-ui.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath }/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath }/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath }/js/county.js" type="text/javascript" ></script>
 </head>
 <body class="easyui-layout" id="layout">
@@ -23,9 +24,9 @@
 		</div>
 		<div id="right">
 			<ul>
-				<li>操作员：
-				<li>帐户：
-				<li>年月：
+				<li>操作员：${userinfo.username }
+				<li>单位：${userinfo.organization }
+				<li>帐户：${userinfo.accountname }
 			</ul>
 		</div>
     </div>
@@ -93,8 +94,8 @@
     
 <!--+++++++++++++++++++++++++主体面板+++++++++++++++++++++++++-->    
     <div data-options="region:'center'" style="padding:5px;">
-<!-- <iframe id="main" name="main" src="subject/dataInit.jsp" ></iframe> -->		
-    	<div id="myTab" class="easyui-tabs">
+    	<div id="mainTab" class="easyui-tabs" fit=true>
+    		<!-- +++++++++++++++++++++++++++首页tab -->
     		<div class="box" title="首页">
 				<div class="link link-one" id="one">
 					<span class="icon"></span>
@@ -137,7 +138,7 @@
 					</a>
 				</div>
 			</div>
-
+			<!-- ---------------------------首页tab -->
     	</div>	
     </div>
 <!---------------------------主体面板--------------------------->

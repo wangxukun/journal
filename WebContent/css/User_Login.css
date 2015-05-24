@@ -1,10 +1,11 @@
+@CHARSET "UTF-8";
 #userlogin_body {
 	PADDING-RIGHT: 0px;
 	PADDING-LEFT: 0px;
 	BACKGROUND: url(../images/user_all_bg.gif) #226cc5 repeat-x 50% top;
 	PADDING-BOTTOM: 0px;
 	MARGIN: 110px 0px 0px;
-	FONT: 12px/150% "Î¢ÈíÑÅºÚ",Arial, Helvetica, sans-serif;
+	FONT: 12px/150% "Î¢ï¿½ï¿½ï¿½Åºï¿½",Arial, Helvetica, sans-serif;
 	PADDING-TOP: 0px;
 	TEXT-DECORATION: none
 }

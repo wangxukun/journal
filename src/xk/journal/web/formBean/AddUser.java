@@ -1,36 +1,29 @@
-/**
- * 
- */
-package xk.journal.domain;
+package xk.journal.web.formBean;
 
-/**
- * @author xukun
- *
- */
-public class User {
+public class AddUser {
 	private String id;
 	private String parentid;
 	private String name;
 	private String password;
+	private String repassword;
 	private int grade;
 	private String organization;
 	private String email;
 	private String phone;
-	
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getParentid() {
+		return parentid;
 	}
-	public void setParentid(String parentid){
+	public void setParentid(String parentid) {
 		this.parentid = parentid;
 	}
-	public String getParentid(){
-		return parentid;
+	public String getName() {
+		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -40,6 +33,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
 	public int getGrade() {
 		return grade;
@@ -67,10 +66,10 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", parentid=" + parentid + ", name=" + name
-				+ ", password=" + password + ", grade=" + grade
-				+ ", organization=" + organization + ", email=" + email
-				+ ", phone=" + phone + "]";
+		return "AddUser [id=" + id + ", parentid=" + parentid + ", name="
+				+ name + ", password=" + password + ", repassword="
+				+ repassword + ", grade=" + grade + ", organization="
+				+ organization + ", email=" + email + ", phone=" + phone + "]";
 	}
 	
 }

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import xk.journal.domain.FeedbackInformation;
 import xk.journal.domain.User;
+import xk.journal.domain.VUserAccountRelation;
 import xk.journal.service.factory.ServiceFactory;
 
 /**
@@ -35,10 +36,10 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		User user = null;
+		VUserAccountRelation relationInfo = null;
 		try {
 			user = ServiceFactory.getBusinessServiceInstance().login(name, password);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if(user!=null){
@@ -46,6 +47,12 @@ public class LoginServlet extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/jspPages/county.jsp").forward(request, response);
 			}else if(user.getGrade()==2){
 				request.getRequestDispatcher("/WEB-INF/jspPages/town.jsp").forward(request, response);
+			}
+			try {
+				relationInfo = ServiceFactory.getBusinessServiceInstance().getRelationInfo(user.getId());
+				request.getSession().setAttribute("userinfo", relationInfo);
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
 		}else{
 			FeedbackInformation feedback = new FeedbackInformation("登录失败","用户名或密码错误","/servlet/Default");
