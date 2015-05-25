@@ -43,16 +43,16 @@ public class LoginServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if(user!=null){
-			if(user.getGrade()==1){
-				request.getRequestDispatcher("/WEB-INF/jspPages/county.jsp").forward(request, response);
-			}else if(user.getGrade()==2){
-				request.getRequestDispatcher("/WEB-INF/jspPages/town.jsp").forward(request, response);
-			}
 			try {
 				relationInfo = ServiceFactory.getBusinessServiceInstance().getRelationInfo(user.getId());
 				request.getSession().setAttribute("userinfo", relationInfo);
 			} catch (SQLException e) {
 				e.printStackTrace();
+			}
+			if(user.getGrade()==1){
+				request.getRequestDispatcher("/WEB-INF/jspPages/county.jsp").forward(request, response);
+			}else if(user.getGrade()==2){
+				request.getRequestDispatcher("/WEB-INF/jspPages/town.jsp").forward(request, response);
 			}
 		}else{
 			FeedbackInformation feedback = new FeedbackInformation("登录失败","用户名或密码错误","/servlet/Default");

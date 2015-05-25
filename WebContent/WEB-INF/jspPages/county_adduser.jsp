@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="/WEB-INF/c.tld"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,6 +10,9 @@
 	<div id="county_adduser_panel" class="easyui-panel" title="增加用户" style="width:400px;">
 		<div style="padding: 10px 60px 20px 60px">
 			<form id="ff" method="post" action="${pageContext.request.contextPath }/servlet/AddUserServlet">
+				<input type="hidden" name="id" value="${userinfo.userid}" />
+				<input type="hidden" name="parentid" value="${userinfo.userparentid}" />
+				<input type="hidden" name="grade" value="${userinfo.usergrade}" />
 				<table cellpadding="5">
 					<tr>
 						<td>姓名：</td>
@@ -27,7 +31,7 @@
 					</tr>
 					<tr>
 						<td>单位：</td>
-						<td><input class="easyui-textbox" type="text" name="arganization" 
+						<td><input class="easyui-textbox" type="text" name="organization" 
 							data-options="required:true"></input></td>
 					</tr>
 					<tr>
