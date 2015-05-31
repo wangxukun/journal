@@ -84,6 +84,7 @@
 					<ul>
 						<li id="addUser"><span>增加用户</span>
 						<li id="delUser"><span>删除用户</span>
+						<li id="permission"><span>权限设置</span>
 					</ul>
 				</div>
 		    </div>

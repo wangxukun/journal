@@ -14,4 +14,15 @@ $(document).ready(function() {
 			});
 		}
 	});
+	$("#permission").click(function(){
+		var isExists = $("#mainTab").tabs('exists','权限设置');
+		if(!isExists){
+			$("#mainTab").tabs('add',{
+				fit: true,
+				title: '权限设置',
+				href: 'CountyPermission',
+				closable: true
+			});
+		}
+	});
 });
